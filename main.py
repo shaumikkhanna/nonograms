@@ -24,6 +24,15 @@ def generate_valid_nonogram(size):
     return row_clues, col_clues
 
 
+
+def print_grid(grid):
+    for row in grid:
+        print(" ".join(row))
+    print()
+
+
+
+
 def solve_simply(row_clues, col_clues):
     size = len(row_clues)
     grid = [[UNKNOWN_CHAR for _ in range(size)] for _ in range(size)]
@@ -69,11 +78,11 @@ def solve_simply(row_clues, col_clues):
     return grid
 
 
-def print_grid(grid):
-    """Displays the current state of the grid."""
-    for row in grid:
-        print(" ".join(row))
-    print()
+
+
+
+
+
 
 # Example Usage
 size = 15
